@@ -1019,7 +1019,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   coinTag: Coin
-  moneda2: Moneda2
+  moneda2Tag: Moneda2
   onCoinCollected:
     m_PersistentCalls:
       m_Calls:
@@ -10478,6 +10478,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 63363164853818580, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 63363164853818580, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63363164853818580, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63363164853818580, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63363164853818580, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 785541632000682035, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -10490,6 +10510,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 987225001033327350, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 987225001033327350, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 987225001033327350, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 4532340128887592661, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -10500,7 +10532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6528083141985775125, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -123.03983
+      value: 259
       objectReference: {fileID: 0}
     - target: {fileID: 6528083141985775125, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10542,11 +10574,76 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieElvis
       objectReference: {fileID: 0}
+    - target: {fileID: 8122620320353970176, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7164267774867083694, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1734686172015063009}
+    - targetCorrespondingSourceObject: {fileID: 7164267774867083694, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1734686172015063010}
   m_SourcePrefab: {fileID: 100100000, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+--- !u!1 &1734686172015063007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7164267774867083694, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+  m_PrefabInstance: {fileID: 1734686172015063006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1734686172015063008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8122620320353970176, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+  m_PrefabInstance: {fileID: 1734686172015063006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1734686172015063009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734686172015063007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2f7e17694eb474782d75d012482d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1734686172015063008}
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1734686172015063010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734686172015063007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701c3f7264da0d44fbea04ced9a478fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 86c5dce0383886f4d981ee94eb8a9ae9, type: 2}
+  health: {fileID: 1734686172015063009}
+  animator: {fileID: 1734686172015063011}
+  enemiesLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!95 &1734686172015063011 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4173737163883156872, guid: 9a638052ceb74c64d87f1f2b2a96ff2c, type: 3}
+  m_PrefabInstance: {fileID: 1734686172015063006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
