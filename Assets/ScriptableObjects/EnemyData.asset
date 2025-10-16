@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0846d10e6e698b409c5b9db7ede9793, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
-  attackRange: 5
+  attackRange: 20
   timeBetweenAttacks: 2
+  attackDuration: 1
   health: 100
   speed: 60
-  damage: 10
+  damage: 30
   enemyName: ZombieElvis
   attackAnimation: Attack
   deathAnimation: Dying
