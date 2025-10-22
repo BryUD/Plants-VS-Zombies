@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bullet : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Bullet : MonoBehaviour
     [SerializeField]
 
     private float damage = 20f;
+    [SerializeField]
+
+    private UnityEvent<Transform> onHitEnemy;
 
     private Rigidbody rigidbody;
 
@@ -29,6 +33,13 @@ public class Bullet : MonoBehaviour
             enemyHealth.TakeDamage(damage);
         }
         SoundManager.instance.Play("Hit_01");
+        onHitEnemy?.Invoke(transform);
         gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        rigidbody.linearVelocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
     }
 }

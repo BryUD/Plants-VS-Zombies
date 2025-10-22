@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     {
         health.InitializeHealth(enemyData.health);
         StartLooking();
-        SoundManager.instance.Play("AppearHe");
+      //SoundManager.instance.Play("AppearHe");
 
     }
 
