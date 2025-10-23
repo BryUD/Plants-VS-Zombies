@@ -27,6 +27,13 @@ public class Enemy : MonoBehaviour
 
     private Health targetHealth;
 
+    private Collider collider;
+
+    private void Awake()
+    {
+        collider = GetComponent<Collider>();
+    }
+
     
     private void OnEnable()
     {
@@ -44,7 +51,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (!isAttacking)
+        if (!isAttacking && health.CurrentHealth > 0)
         {
             transform.Translate(Vector3.left * enemyData.speed * Time.deltaTime);
             Vector3 forward = transform.TransformDirection(Vector3. left);
@@ -77,6 +84,7 @@ public class Enemy : MonoBehaviour
     }
     public void Die()
     {
+        collider.enabled = false;
         SoundManager.instance.Play("Dying_01");
         StartCoroutine(DieRoutine());
     }

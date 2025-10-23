@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   fireRate: 0.5
-  shootAnimationName: Shoot
+  range: 300
+  shootAnimationName: ShootPlant
   idleAnimationName: Idle
   dieAnimationName: Die
-  shootSoundName: gun_Shoot
-  dieShootName: gun_die
-  appearSoundName: gun_appear
+  shootSoundName: ShootPlant
+  dieShootName: DyingPlant
+  appearSoundName: AppearPlant

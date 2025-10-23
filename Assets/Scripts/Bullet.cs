@@ -25,16 +25,19 @@ public class Bullet : MonoBehaviour
         rigidbody.linearVelocity = transform.forward * speed;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Health enemyHealth = collision.gameObject.GetComponent<Health>();
-        if (enemyHealth != null)
+        if (other.CompareTag("Enemy"))
         {
-            enemyHealth.TakeDamage(damage);
+            Health enemyHealth = other.GetComponent<Health>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+            }
+            SoundManager.instance.Play("Hit_01");
+            onHitEnemy?.Invoke(transform);
+            gameObject.SetActive(false);
         }
-        SoundManager.instance.Play("Hit_01");
-        onHitEnemy?.Invoke(transform);
-        gameObject.SetActive(false);
     }
 
     private void OnDisable()
