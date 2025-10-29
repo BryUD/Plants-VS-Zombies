@@ -23,11 +23,18 @@ public class Gun : MonoBehaviour
   [SerializeField]
 
   private Animator animator;
+
+  private bool _isActive = false;
   private bool isShooting = false;
 
   private Health enemyHealth;
 
   private Coroutine shootCoroutine;
+
+  public bool isActive
+    {
+       set { _isActive = value; }
+    }
 
   private void OnEnable()
   {
@@ -40,7 +47,7 @@ public class Gun : MonoBehaviour
 
    private void Update()
    {
-     if (!isShooting && health.CurrentHealth > 0)
+     if (_isActive && !isShooting && health.CurrentHealth > 0)
      {
       Vector3 right = transform.TransformDirection(Vector3.right);
       if (Physics.Raycast(transform.position + Vector3.up * raycastOffset, right, out RaycastHit hit, gunData.range, enemiesLayer))

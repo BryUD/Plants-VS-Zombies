@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Moneda2
   - FxTemporaire
+  - Floor
+  - Step
   layers:
   - Default
   - TransparentFX
