@@ -1,14 +1,11 @@
 using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
-public class Gun : MonoBehaviour
+public class Gun : BasePlant
 {
+
+  [Header("Gun Components")]
   [SerializeField]
-    
-    private Health health;
-  [SerializeField]
-    
-    private GunData gunData;
+  private GunData gunData;
   [SerializeField]
   private InstatiatePoolObjects bulletPool;
   [SerializeField]
@@ -22,35 +19,33 @@ public class Gun : MonoBehaviour
   private float raycastOffset = 2f;
   [SerializeField]
 
-  private Animator animator;
 
-  private bool _isActive = false;
+  
   private bool isShooting = false;
 
   private Health enemyHealth;
 
   private Coroutine shootCoroutine;
 
-  public bool isActive
-    {
-       set { _isActive = value; }
-    }
+
 
   private void OnEnable()
   {
     enemyHealth = null;
     isShooting = false;
+    IsActive = false;
     health.InitializeHealth(gunData.maxHealth);
     animator.Play(gunData.idleAnimationName, 0, 0f);
-    // SoundManager.instance.Play(gunData.appearSoundName);
+    SoundManager.instance.Play(gunData.appearSoundName);
   }
 
    private void Update()
    {
-     if (_isActive && !isShooting && health.CurrentHealth > 0)
+     if (isActive && !isShooting && health.CurrentHealth > 0)
      {
       Vector3 right = transform.TransformDirection(Vector3.right);
-      if (Physics.Raycast(transform.position + Vector3.up * raycastOffset, right, out RaycastHit hit, gunData.range, enemiesLayer))
+      Vecotr rayOrigin = transform.position + Vector3.up * raycastOffset;
+      if (Physics.Raycast(rayOrigin, right, out RaycastHit hit, gunData.range, enemiesLayer))
       {
         isShooting = true;
         enemyHealth = hit.collider.GetComponent<Health>();
@@ -84,17 +79,13 @@ public class Gun : MonoBehaviour
     {
       StopCoroutine(shootCoroutine);
     }
+    currentStep.IsOccupied = false;
+    currentStep = null;
     animator.Play(gunData.dieAnimationName, 0, 0f);
     isShooting = false;
     enemyHealth = null;
     SoundManager.instance.Play(gunData.dieShootName);
-    StartCoroutine(DieRoutine());
+    StartCoroutine(DieRoutine(gunData.dieAnimationName));
   }
 
-
-  private IEnumerator DieRoutine()
-  {
-    yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-    gameObject.SetActive(false);
-  }
 }

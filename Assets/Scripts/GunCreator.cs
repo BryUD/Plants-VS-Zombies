@@ -56,8 +56,10 @@ public class GunCreator : MonoBehaviour
             }
             else
             {
-                objectToPlace.GetComponent<Gun>().isActive = true;
-                currentStep.IsOccupied = true;
+                BasePlant plant = objectToPlace.GetComponent<BasePLant>();
+                plant.IsActive = true;
+                plant.CurrentStep = currentStep;
+                currentStep.IsOccupied = true;   
             }
             objectToPlace = null;
         }
