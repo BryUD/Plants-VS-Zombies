@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d05ade387eb74e4b9d36d3208085bb0, type: 3}
-  m_Name: BasicGun
+  m_Script: {fileID: 11500000, guid: 55d74e1b089dea84282b1edb5fa0f7cc, type: 3}
+  m_Name: ShieldData
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  fireRate: 2
-  range: 600
-  shootAnimationName: ShootPlant
+  maxHealth: 150
   idleAnimationName: Idle
   dieAnimationName: Die
-  shootSoundName: ShootPlant
-  dieShootName: DyingPlant
-  appearSoundName: AppearPlant
+  appearSoundName: shield_appear
+  dieSoundName: shield_die

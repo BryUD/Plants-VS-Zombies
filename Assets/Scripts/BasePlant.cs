@@ -1,6 +1,8 @@
 using Unity.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class BasePlant : MonoBehaviour
 {

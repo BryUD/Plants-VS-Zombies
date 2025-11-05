@@ -8,16 +8,21 @@ public class Shield : BasePlant
     private ShieldData shieldData;
     private void OnEnable()
     {
-        IsActive = false;
+        IsActive = true;
         health.InitializeHealth(shieldData.maxHealth);
         animator.Play(shieldData.idleAnimationName, 0, 0f);
-        SoundManager.instance.Play(shieldData.appearSoundName);
+        //SoundManager.instance.Play(shieldData.appearSoundName);
+    }
+
+    public void Hit()
+    {
+        animator.Play(shieldData.hitAnimationName, 0, 0f);
     }
 
     public void Die()
     {
         IsActive = false;
-        SoundManager.instance.Play(shieldData.dieSoundName);
+        //SoundManager.instance.Play(shieldData.dieSoundName);
         StartCoroutine(DieRoutine(shieldData.dieAnimationName));
     }
 }

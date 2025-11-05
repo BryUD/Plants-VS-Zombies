@@ -38,7 +38,7 @@ public class GunCreator : MonoBehaviour
                 }
                 else
                 {
-                    if (hitInfo.collider.CompareTag("Florr"))
+                    if (hitInfo.collider.CompareTag("Floor"))
                     {
                         objectToPlace.position = hitInfo.point;
                     }
@@ -56,7 +56,7 @@ public class GunCreator : MonoBehaviour
             }
             else
             {
-                BasePlant plant = objectToPlace.GetComponent<BasePLant>();
+                BasePlant plant = objectToPlace.GetComponent<BasePlant>();
                 plant.IsActive = true;
                 plant.CurrentStep = currentStep;
                 currentStep.IsOccupied = true;   

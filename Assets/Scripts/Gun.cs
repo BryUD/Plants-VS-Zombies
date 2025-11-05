@@ -36,7 +36,7 @@ public class Gun : BasePlant
     IsActive = false;
     health.InitializeHealth(gunData.maxHealth);
     animator.Play(gunData.idleAnimationName, 0, 0f);
-    SoundManager.instance.Play(gunData.appearSoundName);
+    //SoundManager.instance.Play(gunData.appearSoundName);
   }
 
    private void Update()
@@ -44,7 +44,7 @@ public class Gun : BasePlant
      if (isActive && !isShooting && health.CurrentHealth > 0)
      {
       Vector3 right = transform.TransformDirection(Vector3.right);
-      Vecotr rayOrigin = transform.position + Vector3.up * raycastOffset;
+      Vector3 rayOrigin = transform.position + Vector3.up * raycastOffset;
       if (Physics.Raycast(rayOrigin, right, out RaycastHit hit, gunData.range, enemiesLayer))
       {
         isShooting = true;
