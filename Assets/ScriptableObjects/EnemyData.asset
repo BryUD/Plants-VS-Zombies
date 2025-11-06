@@ -12,16 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0846d10e6e698b409c5b9db7ede9793, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
-  attackRange: 5
+  maxHealth: 100
+  actionAssets:
+  - soundName: Appear_01
+    animationName: 
+    actionKey: 4
+  - soundName: Attack_01
+    animationName: Attack
+    actionKey: 2
+  - soundName: Dying_01
+    animationName: Dying
+    actionKey: 5
+  - soundName: Hit_01
+    animationName: Got Hit
+    actionKey: 3
+  - soundName: 
+    animationName: Walk
+    actionKey: 1
+  - soundName: 
+    animationName: Iddle
+    actionKey: 0
+  attackRange: 13
   timeBetweenAttacks: 2
   attackDuration: 1
   health: 100
   speed: 60
   damage: 30
   enemyName: ZombieElvis
-  attackAnimation: Attack
-  deathAnimation: Dying
-  walkAnimation: Walk
-  hitAnimation: Got Hit
-  winAnimation: Win
-  idleAnimation: Iddle

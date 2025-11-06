@@ -37,16 +37,17 @@ public class Enemy : MonoBehaviour
     
     private void OnEnable()
     {
-        health.InitializeHealth(enemyData.health);
+        collider.enabled = true;
+        health.InitializeHealth(enemyData.maxHealth);
         StartLooking();
-      //SoundManager.instance.Play("AppearHe");
+      //SoundManager.instance.Play(enemyData.GetSoundName(ActionKey.Appear));
 
     }
 
     private void StartLooking()
     {
         isAttacking = false;
-        animator.Play(enemyData.walkAnimation);
+        animator.Play(enemyData.GetAnimationName(ActionKey.Walk)); 
     }
 
     private void Update()
@@ -71,10 +72,10 @@ public class Enemy : MonoBehaviour
     {
         while (targetHealth != null && targetHealth.CurrentHealth > 0)
         {
-            SoundManager.instance.Play("Attack_01");
-            animator.Play(enemyData.attackAnimation, 0, 0f);
+            SoundManager.instance.Play(enemyData.GetSoundName(ActionKey.Attack));
+            animator.Play(enemyData.GetAnimationName(ActionKey.Attack), 0, 0f);
             yield return new WaitForSeconds(enemyData.attackDuration);
-            SoundManager.instance.Play("Hit_01");
+            SoundManager.instance.Play(enemyData.GetSoundName(ActionKey.Hit));
             onAttackTarget?.Invoke(targetHealth.transform);
             targetHealth.TakeDamage(enemyData.damage);
             yield return new WaitForSeconds(enemyData.timeBetweenAttacks);
@@ -86,7 +87,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         collider.enabled = false;
-        SoundManager.instance.Play("Dying_01");
+        SoundManager.instance.Play(enemyData.GetSoundName(ActionKey.Die));
         StartCoroutine(DieRoutine());
     }
     private IEnumerator DieRoutine()
@@ -95,7 +96,7 @@ public class Enemy : MonoBehaviour
         {
             StopCoroutine(attackCoroutine);
         }
-        animator.Play(enemyData.deathAnimation);
+        animator.Play(enemyData.GetAnimationName(ActionKey.Die)); 
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         gameObject.SetActive(false);
     }

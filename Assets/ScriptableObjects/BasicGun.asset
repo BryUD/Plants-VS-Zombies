@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: BasicGun
   m_EditorClassIdentifier: 
   maxHealth: 100
+  actionAssets:
+  - soundName: 
+    animationName: Idle
+    actionKey: 0
+  - soundName: AppearPlant
+    animationName: Appear
+    actionKey: 4
+  - soundName: ShootPlant
+    animationName: Attack
+    actionKey: 2
+  - soundName: DyingPlant
+    animationName: Die
+    actionKey: 5
   fireRate: 2
   range: 600
-  shootAnimationName: ShootPlant
-  idleAnimationName: Idle
-  dieAnimationName: Die
-  shootSoundName: ShootPlant
-  dieShootName: DyingPlant
-  appearSoundName: AppearPlant
