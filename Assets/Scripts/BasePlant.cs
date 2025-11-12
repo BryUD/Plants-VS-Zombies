@@ -24,7 +24,7 @@ public class BasePlant : MonoBehaviour
     }
 
     protected bool isActive;
-    public bool IsActive
+    public virtual bool IsActive
     {
         set
         {

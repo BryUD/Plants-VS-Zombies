@@ -5,30 +5,60 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: eyeball_l
-    second: {fileID: 2100000, guid: 38f0e99833ea6544fa6b0d6559e5b733, type: 2}
+      name: Sunflower_Arms_DefaultFlower_ASM
+    second: {fileID: 2800000, guid: 0bfafa72dea540e4ab1f40093fa221c3, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: eyeball_r
-    second: {fileID: 2100000, guid: 4c3c8576c747e184c961ecb8646ec033, type: 2}
+      name: Sunflower_Arms_DefaultFlower_Color
+    second: {fileID: 2800000, guid: cee49cde35725854db0f80f4f3cf0db7, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: sunflower_body_d
-    second: {fileID: 2100000, guid: 1c4af8c30406e6246a81b1988245721b, type: 2}
+      name: Sunflower_Arms_DefaultFlower_Normal
+    second: {fileID: 2800000, guid: 120877d14d61dce44b4ba4a774c2b707, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: sunflower_hand_d
-    second: {fileID: 2100000, guid: a098287dd130ef44ab4dd800585ed4e6, type: 2}
+      name: Sunflower_Body_DefaultFlower_ASM
+    second: {fileID: 2800000, guid: 44b348c598351a3409937b050ff2ca5c, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: sunflower_head_d
-    second: {fileID: 2100000, guid: 56235be24ace9e64592dc1fab8a95b18, type: 2}
+      name: Sunflower_Body_DefaultFlower_Color
+    second: {fileID: 2800000, guid: 9ddb2896f42cda14a886b6732aa5953b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sunflower_Body_DefaultFlower_Normal
+    second: {fileID: 2800000, guid: d80dddb091f17a041b3a806a52c59eac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sunflower_Eye_ASM
+    second: {fileID: 2800000, guid: d39fc57945033cd4caf4860ce976f4b1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sunflower_Eye_Color
+    second: {fileID: 2800000, guid: 5cbd230c732999f47a09c08cdc462a8f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sunflower_Head_DefaultFlower_ASM
+    second: {fileID: 2800000, guid: 7ce618d0e5f3c49429a830c569669fb6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sunflower_Head_DefaultFlower_Color
+    second: {fileID: 2800000, guid: 50a4f84b3c08967448fa6d11d85219bb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sunflower_Head_DefaultFlower_Normal
+    second: {fileID: 2800000, guid: d5d4f59b81ae8e34099edee79b8e9f4b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
