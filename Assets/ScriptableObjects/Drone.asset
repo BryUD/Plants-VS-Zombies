@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d05ade387eb74e4b9d36d3208085bb0, type: 3}
-  m_Name: BasicGun
+  m_Name: Drone
   m_EditorClassIdentifier: 
   maxHealth: 50
   actionAssets:
   - soundName: 
-    animationName: Idle
+    animationName: IdleDrone
     actionKey: 0
   - soundName: AppearPlant
     animationName: Appear
     actionKey: 4
-  - soundName: ShootPlant
-    animationName: ShootPlant
+  - soundName: DroneShoot
+    animationName: ShootDrone
     actionKey: 2
-  - soundName: DyingPlant
-    animationName: Die
+  - soundName: DroneDie
+    animationName: DieDrone
     actionKey: 5
-  fireRate: 2
-  range: 600
+  fireRate: 4
+  range: 300

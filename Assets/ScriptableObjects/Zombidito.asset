@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0846d10e6e698b409c5b9db7ede9793, type: 3}
+  m_Name: Zombidito
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  actionAssets:
+  - soundName: Appear_01
+    animationName: 
+    actionKey: 4
+  - soundName: Attack_01
+    animationName: Attack
+    actionKey: 2
+  - soundName: Dying_01
+    animationName: Dying
+    actionKey: 5
+  - soundName: Hit_01
+    animationName: Got Hit
+    actionKey: 3
+  - soundName: 
+    animationName: Walk
+    actionKey: 1
+  - soundName: 
+    animationName: Iddle
+    actionKey: 0
+  attackRange: 13
+  timeBetweenAttacks: 2
+  attackDuration: 1
+  health: 100
+  speed: 100
+  damage: 80
+  enemyName: Zombidito

@@ -36,7 +36,7 @@ public class Gun : BasePlant
     IsActive = false;
     health.InitializeHealth(gunData.maxHealth);
     animator.Play(gunData.GetAnimationName(ActionKey.Idle), 0, 0f);
-    SoundManager.instance.Play(gunData.GetSoundName(ActionKey.Appear));
+    //SoundManager.instance.Play(gunData.GetSoundName(ActionKey.Appear));
   }
 
    private void Update()
