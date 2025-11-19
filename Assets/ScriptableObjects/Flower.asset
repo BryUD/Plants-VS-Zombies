@@ -17,5 +17,11 @@ MonoBehaviour:
   - soundName: 
     animationName: IdleSunflower
     actionKey: 0
+  - soundName: 
+    animationName: SpawnCoinSunFlower
+    actionKey: 2
+  - soundName: 
+    animationName: DieSunFlower
+    actionKey: 5
   spawnCoinTime: 2
   coinAmount: 1
