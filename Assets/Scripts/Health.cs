@@ -31,6 +31,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (currentHealth <= 0) return;
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, initialHealth);
         UpdateHealthBar();

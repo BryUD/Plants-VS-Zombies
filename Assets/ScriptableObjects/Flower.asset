@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   actionAssets:
-  - soundName: 
-    animationName: IdleSunflower
-    actionKey: 0
-  - soundName: 
+  - soundName: AppearSunFlower
+    animationName: AppearPlant
+    actionKey: 4
+  - soundName: AttackSunFlower
     animationName: SpawnCoinSunFlower
     actionKey: 2
-  - soundName: 
+  - soundName: DieSunFlower
     animationName: DieSunFlower
     actionKey: 5
-  spawnCoinTime: 2
+  - soundName: 
+    animationName: IdleSunFlower
+    actionKey: 0
+  spawnCoinTime: 4
   coinAmount: 1
