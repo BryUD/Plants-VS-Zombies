@@ -32,6 +32,9 @@ MonoBehaviour:
   - soundName: 
     animationName: Iddle
     actionKey: 0
+  - soundName: 
+    animationName: Dancing
+    actionKey: 6
   attackRange: 13
   timeBetweenAttacks: 2
   attackDuration: 1

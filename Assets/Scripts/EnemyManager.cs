@@ -47,6 +47,7 @@ public void SetEnemiesToSpawn(InstantiateEnemy[]enemies)
             enemyPool.InstantiateObject(lane.EnemySpawnPoint);
             Enemy spawnedEnemy = enemyPool.GetCurrentObject().GetComponent<Enemy>();
             spawnedEnemy.OnDie.AddListener(OnEnemyDie);
+            currentEnemies.Add(spawnedEnemy);
         }
 
     }
@@ -61,6 +62,15 @@ public void SetEnemiesToSpawn(InstantiateEnemy[]enemies)
                 enemy.OnDie.RemoveListener(OnEnemyDie);
             }
             onWinGame?.Invoke();
+        }
+    }
+
+    public void EnemiesWin()
+    {
+        foreach (Enemy enemy in currentEnemies)
+        {
+          enemy.OnDie.RemoveListener(OnEnemyDie);
+          enemy.Win();
         }
     }
 }
