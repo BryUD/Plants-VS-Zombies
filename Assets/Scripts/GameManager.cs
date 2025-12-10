@@ -10,6 +10,9 @@ private GameData gameData;
 private EnemyManager enemyManager;
 [SerializeField]
 
+private PlantManager plantManager;
+[SerializeField]
+
 private UnityEvent onWinGame;
 [SerializeField]
 
@@ -22,6 +25,7 @@ public void StartLevel()
         LevelData currentLevel = gameData.levels[gameData.currentLevelIndex];
         enemyManager.SetEnemiesToSpawn(currentLevel.enemiesToSpawn);
         enemyManager.StartSpawningEnemies();
+        plantManager.SetAvailablePlants(currentLevel.availablePlants);
     }
 
     public void WinGame()
