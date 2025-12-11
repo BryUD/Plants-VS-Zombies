@@ -106,6 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appearAnimationName: CoinAppear
   hideAnimationName: CoinDisappear
+  secondsActive: 5
 --- !u!1001 &6461455533470848297
 PrefabInstance:
   m_ObjectHideFlags: 0

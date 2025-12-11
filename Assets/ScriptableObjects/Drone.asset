@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d05ade387eb74e4b9d36d3208085bb0, type: 3}
   m_Name: Drone
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 100
   actionAssets:
   - soundName: 
     animationName: IdleDrone
